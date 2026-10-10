@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "hoodinislootbags:item/legendary_lootbag"
+  }
+}
