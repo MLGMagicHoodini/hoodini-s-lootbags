@@ -22,7 +22,7 @@ A Minecraft mod that introduces customizable loot bag rewards for defeating host
 
 ## ⚙️ Configuration
 
-All drop percentages, mob danger scaling, and tier chances can be customized in the mod's configuration file (`config/[mod-id].json` or `.toml`). 
+All drop percentages, mob danger scaling, and tier chances can be customized in the mod's configuration page inside the game. 
 
 *More configuration options and features coming soon!*
 
@@ -30,8 +30,8 @@ All drop percentages, mob danger scaling, and tier chances can be customized in 
 
 ## 📥 Installation
 
-1. Download and install **[Fabric / Forge / NeoForge]** for your Minecraft version.
-2. Download the latest release of **[Mod Name]** from [CurseForge](#) / [Modrinth](#) / [GitHub Releases](#).
+1. Download and install **NeoForge** for your Minecraft version.
+2. Download the latest release of **Hoodin's Lootbags** from [CurseForge](#) / [Modrinth](#) / [GitHub Releases](#).
 3. Place the `.jar` file into your Minecraft `.minecraft/mods` folder.
 4. Launch the game and enjoy hunting!
 
