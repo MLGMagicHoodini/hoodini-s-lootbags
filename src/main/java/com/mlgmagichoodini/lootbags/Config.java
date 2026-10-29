@@ -8,7 +8,7 @@ import java.util.Map;
 import java.util.Set;
 
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.SpawnEggItem;
@@ -17,7 +17,7 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.event.config.ModConfigEvent;
 import net.neoforged.neoforge.common.ModConfigSpec;
 
-@EventBusSubscriber(modid = HoodinisLootbags.MODID, bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber(modid = HoodinisLootbags.MODID)
 public class Config {
     private static final ModConfigSpec.Builder BUILDER = new ModConfigSpec.Builder();
 
@@ -89,10 +89,10 @@ public class Config {
     public static final ModConfigSpec SPEC = BUILDER.build();
 
     // Parsed copies of the lists above, rebuilt every time the config loads or reloads.
-    private static volatile Set<ResourceLocation> mobBlacklist = Set.of();
-    private static volatile Set<ResourceLocation> itemBlacklist = Set.of();
-    private static volatile Set<ResourceLocation> itemWhitelist = Set.of();
-    private static volatile Map<ResourceLocation, Double> mobMultipliers = Map.of();
+    private static volatile Set<Identifier> mobBlacklist = Set.of();
+    private static volatile Set<Identifier> itemBlacklist = Set.of();
+    private static volatile Set<Identifier> itemWhitelist = Set.of();
+    private static volatile Map<Identifier, Double> mobMultipliers = Map.of();
 
     /** Translation keys for the in-game config screen (texts are in assets/hoodinislootbags/lang/en_us.json). */
     private static String key(String path) {
@@ -100,7 +100,7 @@ public class Config {
     }
 
     private static boolean validateId(Object obj) {
-        return obj instanceof String s && ResourceLocation.tryParse(s.trim()) != null;
+        return obj instanceof String s && Identifier.tryParse(s.trim()) != null;
     }
 
     private static boolean validateMultiplier(Object obj) {
@@ -116,13 +116,13 @@ public class Config {
         } catch (NumberFormatException e) {
             return false;
         }
-        return ResourceLocation.tryParse(s.substring(0, eq).trim()) != null;
+        return Identifier.tryParse(s.substring(0, eq).trim()) != null;
     }
 
-    private static Set<ResourceLocation> parseIds(List<? extends String> list) {
-        Set<ResourceLocation> result = new HashSet<>();
+    private static Set<Identifier> parseIds(List<? extends String> list) {
+        Set<Identifier> result = new HashSet<>();
         for (String entry : list) {
-            ResourceLocation id = ResourceLocation.tryParse(entry.trim());
+            Identifier id = Identifier.tryParse(entry.trim());
             if (id != null) {
                 result.add(id);
             }
@@ -139,13 +139,13 @@ public class Config {
         itemBlacklist = parseIds(ITEM_BLACKLIST.get());
         itemWhitelist = parseIds(ITEM_WHITELIST.get());
 
-        Map<ResourceLocation, Double> multipliers = new HashMap<>();
+        Map<Identifier, Double> multipliers = new HashMap<>();
         for (String entry : MOB_MULTIPLIERS.get()) {
             int eq = entry.indexOf('=');
             if (eq < 1) {
                 continue;
             }
-            ResourceLocation id = ResourceLocation.tryParse(entry.substring(0, eq).trim());
+            Identifier id = Identifier.tryParse(entry.substring(0, eq).trim());
             try {
                 double value = Double.parseDouble(entry.substring(eq + 1).trim());
                 if (id != null) {
@@ -158,18 +158,18 @@ public class Config {
         mobMultipliers = multipliers;
     }
 
-    public static boolean isMobBlacklisted(ResourceLocation mobId) {
+    public static boolean isMobBlacklisted(Identifier mobId) {
         return mobBlacklist.contains(mobId);
     }
 
-    public static double getMobMultiplier(ResourceLocation mobId) {
+    public static double getMobMultiplier(Identifier mobId) {
         return mobMultipliers.getOrDefault(mobId, 1.0);
     }
 
     /** Decides whether an item is allowed to come out of a bag. */
     public static boolean isItemAllowed(ItemStack stack) {
         Item item = stack.getItem();
-        ResourceLocation id = BuiltInRegistries.ITEM.getKey(item);
+        Identifier id = BuiltInRegistries.ITEM.getKey(item);
 
         if (ItemRules.ALWAYS_BLOCKED.contains(id)) {
             return false;
@@ -180,7 +180,7 @@ public class Config {
         if (itemBlacklist.contains(id)) {
             return false;
         }
-        Set<ResourceLocation> whitelist = itemWhitelist;
+        Set<Identifier> whitelist = itemWhitelist;
         return whitelist.isEmpty() || whitelist.contains(id);
     }
 }

@@ -1,7 +1,7 @@
 package com.mlgmagichoodini.lootbags;
 
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.item.ItemEntity;
@@ -30,7 +30,7 @@ public class BagDrops {
             return;
         }
 
-        ResourceLocation mobId = BuiltInRegistries.ENTITY_TYPE.getKey(victim.getType());
+        Identifier mobId = BuiltInRegistries.ENTITY_TYPE.getKey(victim.getType());
         if (Config.isMobBlacklisted(mobId)) {
             return;
         }

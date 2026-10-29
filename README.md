@@ -1,42 +1,25 @@
-# 🎒 Hoodini's Lootbags
 
-A Minecraft mod that introduces customizable loot bag rewards for defeating hostile mobs. Take down dangerous foes, test your luck, and earn tiered loot drops!
+Installation information
+=======
 
----
+This template repository can be directly cloned to get you started with a new
+mod. Simply create a new repository cloned from this one, by following the
+instructions provided by [GitHub](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template).
 
-## ✨ Features
+Once you have your clone, simply open the repository in the IDE of your choice. The usual recommendation for an IDE is either IntelliJ IDEA or Eclipse.
 
-* **Mob Drop Rewards:** Hostile mobs have a chance to drop a loot bag upon death.
-* **Tiered Loot System:** 6 rarity tiers available:
-  * ⚪ **Common**
-  * 🟢 **Uncommon**
-  * 🔵 **Rare**
-  * 🟣 **Epic**
-  * 🟡 **Legendary**
-  * 🔴 **Mythic**
-* **Scaling Rewards:** Higher-tier / more dangerous mobs have a better chance at dropping higher-quality loot.
-* **Unique Drops:** Obtain special items, including gear enchanted beyond vanilla limits!
-* **Fully Configurable:** Easily tweak drop rates, tier chance, and loot tables to fit your modpack or playstyle.
+If at any point you are missing libraries in your IDE, or you've run into problems you can
+run `gradlew --refresh-dependencies` to refresh the local cache. `gradlew clean` to reset everything 
+{this does not affect your code} and then start the process again.
 
----
+Mapping Names:
+============
+By default, the MDK is configured to use the official mapping names from Mojang for methods and fields 
+in the Minecraft codebase. These names are covered by a specific license. All modders should be aware of this
+license. For the latest license text, refer to the mapping file itself, or the reference copy here:
+https://github.com/NeoForged/NeoForm/blob/main/Mojang.md
 
-## ⚙️ Configuration
-
-All drop percentages, mob danger scaling, and tier chances can be customized in the mod's configuration page inside the game. 
-
-*More configuration options and features coming soon!*
-
----
-
-## 📥 Installation
-
-1. Download and install **NeoForge** for your Minecraft version.
-2. Download the latest release of **Hoodin's Lootbags** from [CurseForge](#) / [Modrinth](#) / [GitHub Releases](#).
-3. Place the `.jar` file into your Minecraft `.minecraft/mods` folder.
-4. Launch the game and enjoy hunting!
-
----
-
-## 🤝 Contributing & Feedback
-
-Found a bug or have a suggestion? Feel free to open an issue or submit a pull request on GitHub!
+Additional Resources: 
+==========
+Community Documentation: https://docs.neoforged.net/  
+NeoForged Discord: https://discord.neoforged.net/

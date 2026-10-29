@@ -2,10 +2,11 @@ package com.mlgmagichoodini.lootbags;
 
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
-import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -35,12 +36,12 @@ public class LootBagItem extends Item {
     }
 
     @Override
-    public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
+    public InteractionResult use(Level level, Player player, InteractionHand hand) {
         ItemStack bag = player.getItemInHand(hand);
 
         // Everything below happens on the server only.
         if (!(level instanceof ServerLevel serverLevel)) {
-            return InteractionResultHolder.success(bag);
+            return InteractionResult.SUCCESS_SERVER;
         }
 
         LootTable table = serverLevel.getServer().reloadableRegistries().getLootTable(tier.getLootTableKey());
@@ -63,7 +64,7 @@ public class LootBagItem extends Item {
 
         if (reward.isEmpty()) {
             // Empty table or everything blocked: keep the bag.
-            return InteractionResultHolder.fail(bag);
+            return InteractionResult.FAIL;
         }
 
         // 1) Remember what we are giving BEFORE touching it (adding to the inventory empties the stack).
@@ -80,9 +81,12 @@ public class LootBagItem extends Item {
         bag.shrink(1);
 
         level.playSound(null, player.blockPosition(), SoundEvents.BUNDLE_DROP_CONTENTS, SoundSource.PLAYERS, 1.0F, 1.0F);
-        player.displayClientMessage(
-                Component.translatable("message.hoodinislootbags.received", given.getCount(), given.getHoverName()), true);
+        Component message = Component.translatable(
+                "message.hoodinislootbags.received", given.getCount(), given.getHoverName());
+        if (player instanceof ServerPlayer serverPlayer) {
+            serverPlayer.sendOverlayMessage(message);
+        }
 
-        return InteractionResultHolder.success(bag);
+        return InteractionResult.SUCCESS_SERVER;
     }
 }

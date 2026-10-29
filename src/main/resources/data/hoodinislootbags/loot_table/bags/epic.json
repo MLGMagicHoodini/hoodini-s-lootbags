@@ -7,7 +7,7 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:diamond",
-          "weight": 800,
+          "weight": 8000,
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -22,7 +22,7 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:emerald_block",
-          "weight": 400,
+          "weight": 4000,
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -37,7 +37,7 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:golden_apple",
-          "weight": 500,
+          "weight": 5000,
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -52,7 +52,7 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:ancient_debris",
-          "weight": 400,
+          "weight": 4000,
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -67,7 +67,7 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:blaze_rod",
-          "weight": 600,
+          "weight": 6000,
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -82,7 +82,7 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:experience_bottle",
-          "weight": 600,
+          "weight": 6000,
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -97,7 +97,7 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:shulker_shell",
-          "weight": 200,
+          "weight": 2000,
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -111,104 +111,1730 @@
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:diamond_sword",
-          "weight": 44,
+          "name": "minecraft:golden_sword",
+          "weight": 63,
           "functions": [
             {
               "function": "minecraft:set_enchantments",
+              "add": true,
               "enchantments": {
                 "minecraft:sharpness": {
                   "type": "minecraft:uniform",
-                  "min": 4,
+                  "min": 3,
                   "max": 5
-                },
-                "minecraft:unbreaking": 3,
-                "minecraft:looting": 3,
-                "minecraft:fire_aspect": 2,
-                "minecraft:mending": 1
+                }
               }
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:unbreaking": {
+                  "type": "minecraft:uniform",
+                  "min": 2,
+                  "max": 3
+                }
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.6
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:looting": {
+                  "type": "minecraft:uniform",
+                  "min": 2,
+                  "max": 3
+                }
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.5
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:fire_aspect": {
+                  "type": "minecraft:uniform",
+                  "min": 1,
+                  "max": 2
+                }
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.4
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:sweeping_edge": {
+                  "type": "minecraft:uniform",
+                  "min": 2,
+                  "max": 3
+                }
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.4
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:mending": 1
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.3
+                }
+              ]
             }
           ]
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:diamond_pickaxe",
-          "weight": 44,
+          "name": "minecraft:iron_sword",
+          "weight": 253,
           "functions": [
             {
               "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:sharpness": {
+                  "type": "minecraft:uniform",
+                  "min": 3,
+                  "max": 5
+                }
+              }
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:unbreaking": {
+                  "type": "minecraft:uniform",
+                  "min": 2,
+                  "max": 3
+                }
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.6
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:looting": {
+                  "type": "minecraft:uniform",
+                  "min": 2,
+                  "max": 3
+                }
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.5
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:fire_aspect": {
+                  "type": "minecraft:uniform",
+                  "min": 1,
+                  "max": 2
+                }
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.4
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:sweeping_edge": {
+                  "type": "minecraft:uniform",
+                  "min": 2,
+                  "max": 3
+                }
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.4
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:mending": 1
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.3
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:golden_pickaxe",
+          "weight": 63,
+          "functions": [
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
               "enchantments": {
                 "minecraft:efficiency": {
                   "type": "minecraft:uniform",
-                  "min": 4,
+                  "min": 3,
                   "max": 5
-                },
-                "minecraft:unbreaking": 3,
-                "minecraft:fortune": 3,
-                "minecraft:mending": 1
+                }
               }
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:unbreaking": {
+                  "type": "minecraft:uniform",
+                  "min": 2,
+                  "max": 3
+                }
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.6
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:fortune": {
+                  "type": "minecraft:uniform",
+                  "min": 2,
+                  "max": 3
+                }
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.5
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:mending": 1
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.3
+                }
+              ]
             }
           ]
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:diamond_chestplate",
-          "weight": 29,
+          "name": "minecraft:iron_pickaxe",
+          "weight": 253,
           "functions": [
             {
               "function": "minecraft:set_enchantments",
+              "add": true,
               "enchantments": {
-                "minecraft:protection": 4,
-                "minecraft:unbreaking": 3,
-                "minecraft:thorns": 3,
-                "minecraft:mending": 1
+                "minecraft:efficiency": {
+                  "type": "minecraft:uniform",
+                  "min": 3,
+                  "max": 5
+                }
               }
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:unbreaking": {
+                  "type": "minecraft:uniform",
+                  "min": 2,
+                  "max": 3
+                }
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.6
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:fortune": {
+                  "type": "minecraft:uniform",
+                  "min": 2,
+                  "max": 3
+                }
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.5
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:mending": 1
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.3
+                }
+              ]
             }
           ]
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:diamond_leggings",
-          "weight": 29,
+          "name": "minecraft:golden_axe",
+          "weight": 42,
           "functions": [
             {
               "function": "minecraft:set_enchantments",
+              "add": true,
               "enchantments": {
-                "minecraft:protection": 4,
-                "minecraft:unbreaking": 3,
-                "minecraft:mending": 1
+                "minecraft:efficiency": {
+                  "type": "minecraft:uniform",
+                  "min": 3,
+                  "max": 5
+                }
               }
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:sharpness": {
+                  "type": "minecraft:uniform",
+                  "min": 3,
+                  "max": 5
+                }
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.5
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:unbreaking": {
+                  "type": "minecraft:uniform",
+                  "min": 2,
+                  "max": 3
+                }
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.6
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:mending": 1
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.3
+                }
+              ]
             }
           ]
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:diamond_boots",
-          "weight": 29,
+          "name": "minecraft:iron_axe",
+          "weight": 169,
           "functions": [
             {
               "function": "minecraft:set_enchantments",
+              "add": true,
               "enchantments": {
-                "minecraft:protection": 4,
-                "minecraft:feather_falling": 4,
-                "minecraft:unbreaking": 3,
+                "minecraft:efficiency": {
+                  "type": "minecraft:uniform",
+                  "min": 3,
+                  "max": 5
+                }
+              }
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:sharpness": {
+                  "type": "minecraft:uniform",
+                  "min": 3,
+                  "max": 5
+                }
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.5
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:unbreaking": {
+                  "type": "minecraft:uniform",
+                  "min": 2,
+                  "max": 3
+                }
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.6
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
                 "minecraft:mending": 1
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.3
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:golden_shovel",
+          "weight": 21,
+          "functions": [
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:efficiency": {
+                  "type": "minecraft:uniform",
+                  "min": 3,
+                  "max": 5
+                }
               }
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:unbreaking": {
+                  "type": "minecraft:uniform",
+                  "min": 2,
+                  "max": 3
+                }
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.6
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:fortune": {
+                  "type": "minecraft:uniform",
+                  "min": 2,
+                  "max": 3
+                }
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.4
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:mending": 1
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.3
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:iron_shovel",
+          "weight": 84,
+          "functions": [
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:efficiency": {
+                  "type": "minecraft:uniform",
+                  "min": 3,
+                  "max": 5
+                }
+              }
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:unbreaking": {
+                  "type": "minecraft:uniform",
+                  "min": 2,
+                  "max": 3
+                }
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.6
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:fortune": {
+                  "type": "minecraft:uniform",
+                  "min": 2,
+                  "max": 3
+                }
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.4
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:mending": 1
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.3
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:chainmail_helmet",
+          "weight": 21,
+          "functions": [
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:protection": {
+                  "type": "minecraft:uniform",
+                  "min": 2,
+                  "max": 4
+                }
+              }
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:unbreaking": {
+                  "type": "minecraft:uniform",
+                  "min": 2,
+                  "max": 3
+                }
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.6
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:respiration": {
+                  "type": "minecraft:uniform",
+                  "min": 2,
+                  "max": 3
+                }
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.4
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:aqua_affinity": 1
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.4
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:thorns": {
+                  "type": "minecraft:uniform",
+                  "min": 2,
+                  "max": 3
+                }
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.3
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:mending": 1
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.3
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:golden_helmet",
+          "weight": 42,
+          "functions": [
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:protection": {
+                  "type": "minecraft:uniform",
+                  "min": 2,
+                  "max": 4
+                }
+              }
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:unbreaking": {
+                  "type": "minecraft:uniform",
+                  "min": 2,
+                  "max": 3
+                }
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.6
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:respiration": {
+                  "type": "minecraft:uniform",
+                  "min": 2,
+                  "max": 3
+                }
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.4
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:aqua_affinity": 1
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.4
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:thorns": {
+                  "type": "minecraft:uniform",
+                  "min": 2,
+                  "max": 3
+                }
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.3
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:mending": 1
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.3
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:iron_helmet",
+          "weight": 148,
+          "functions": [
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:protection": {
+                  "type": "minecraft:uniform",
+                  "min": 2,
+                  "max": 4
+                }
+              }
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:unbreaking": {
+                  "type": "minecraft:uniform",
+                  "min": 2,
+                  "max": 3
+                }
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.6
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:respiration": {
+                  "type": "minecraft:uniform",
+                  "min": 2,
+                  "max": 3
+                }
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.4
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:aqua_affinity": 1
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.4
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:thorns": {
+                  "type": "minecraft:uniform",
+                  "min": 2,
+                  "max": 3
+                }
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.3
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:mending": 1
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.3
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:chainmail_chestplate",
+          "weight": 21,
+          "functions": [
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:protection": {
+                  "type": "minecraft:uniform",
+                  "min": 2,
+                  "max": 4
+                }
+              }
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:unbreaking": {
+                  "type": "minecraft:uniform",
+                  "min": 2,
+                  "max": 3
+                }
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.6
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:thorns": {
+                  "type": "minecraft:uniform",
+                  "min": 2,
+                  "max": 3
+                }
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.3
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:mending": 1
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.3
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:golden_chestplate",
+          "weight": 42,
+          "functions": [
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:protection": {
+                  "type": "minecraft:uniform",
+                  "min": 2,
+                  "max": 4
+                }
+              }
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:unbreaking": {
+                  "type": "minecraft:uniform",
+                  "min": 2,
+                  "max": 3
+                }
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.6
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:thorns": {
+                  "type": "minecraft:uniform",
+                  "min": 2,
+                  "max": 3
+                }
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.3
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:mending": 1
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.3
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:iron_chestplate",
+          "weight": 148,
+          "functions": [
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:protection": {
+                  "type": "minecraft:uniform",
+                  "min": 2,
+                  "max": 4
+                }
+              }
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:unbreaking": {
+                  "type": "minecraft:uniform",
+                  "min": 2,
+                  "max": 3
+                }
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.6
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:thorns": {
+                  "type": "minecraft:uniform",
+                  "min": 2,
+                  "max": 3
+                }
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.3
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:mending": 1
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.3
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:chainmail_leggings",
+          "weight": 21,
+          "functions": [
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:protection": {
+                  "type": "minecraft:uniform",
+                  "min": 2,
+                  "max": 4
+                }
+              }
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:unbreaking": {
+                  "type": "minecraft:uniform",
+                  "min": 2,
+                  "max": 3
+                }
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.6
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:thorns": {
+                  "type": "minecraft:uniform",
+                  "min": 2,
+                  "max": 3
+                }
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.3
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:mending": 1
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.3
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:golden_leggings",
+          "weight": 42,
+          "functions": [
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:protection": {
+                  "type": "minecraft:uniform",
+                  "min": 2,
+                  "max": 4
+                }
+              }
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:unbreaking": {
+                  "type": "minecraft:uniform",
+                  "min": 2,
+                  "max": 3
+                }
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.6
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:thorns": {
+                  "type": "minecraft:uniform",
+                  "min": 2,
+                  "max": 3
+                }
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.3
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:mending": 1
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.3
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:iron_leggings",
+          "weight": 148,
+          "functions": [
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:protection": {
+                  "type": "minecraft:uniform",
+                  "min": 2,
+                  "max": 4
+                }
+              }
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:unbreaking": {
+                  "type": "minecraft:uniform",
+                  "min": 2,
+                  "max": 3
+                }
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.6
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:thorns": {
+                  "type": "minecraft:uniform",
+                  "min": 2,
+                  "max": 3
+                }
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.3
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:mending": 1
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.3
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:chainmail_boots",
+          "weight": 21,
+          "functions": [
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:protection": {
+                  "type": "minecraft:uniform",
+                  "min": 2,
+                  "max": 4
+                }
+              }
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:unbreaking": {
+                  "type": "minecraft:uniform",
+                  "min": 2,
+                  "max": 3
+                }
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.6
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:feather_falling": {
+                  "type": "minecraft:uniform",
+                  "min": 2,
+                  "max": 4
+                }
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.5
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:depth_strider": {
+                  "type": "minecraft:uniform",
+                  "min": 2,
+                  "max": 3
+                }
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.4
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:thorns": {
+                  "type": "minecraft:uniform",
+                  "min": 2,
+                  "max": 3
+                }
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.3
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:mending": 1
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.3
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:golden_boots",
+          "weight": 42,
+          "functions": [
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:protection": {
+                  "type": "minecraft:uniform",
+                  "min": 2,
+                  "max": 4
+                }
+              }
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:unbreaking": {
+                  "type": "minecraft:uniform",
+                  "min": 2,
+                  "max": 3
+                }
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.6
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:feather_falling": {
+                  "type": "minecraft:uniform",
+                  "min": 2,
+                  "max": 4
+                }
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.5
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:depth_strider": {
+                  "type": "minecraft:uniform",
+                  "min": 2,
+                  "max": 3
+                }
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.4
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:thorns": {
+                  "type": "minecraft:uniform",
+                  "min": 2,
+                  "max": 3
+                }
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.3
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:mending": 1
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.3
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:iron_boots",
+          "weight": 148,
+          "functions": [
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:protection": {
+                  "type": "minecraft:uniform",
+                  "min": 2,
+                  "max": 4
+                }
+              }
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:unbreaking": {
+                  "type": "minecraft:uniform",
+                  "min": 2,
+                  "max": 3
+                }
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.6
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:feather_falling": {
+                  "type": "minecraft:uniform",
+                  "min": 2,
+                  "max": 4
+                }
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.5
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:depth_strider": {
+                  "type": "minecraft:uniform",
+                  "min": 2,
+                  "max": 3
+                }
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.4
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:thorns": {
+                  "type": "minecraft:uniform",
+                  "min": 2,
+                  "max": 3
+                }
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.3
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:mending": 1
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.3
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:bow",
+          "weight": 211,
+          "functions": [
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:power": {
+                  "type": "minecraft:uniform",
+                  "min": 3,
+                  "max": 5
+                }
+              }
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:unbreaking": {
+                  "type": "minecraft:uniform",
+                  "min": 2,
+                  "max": 3
+                }
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.6
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:punch": {
+                  "type": "minecraft:uniform",
+                  "min": 1,
+                  "max": 2
+                }
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.4
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:flame": 1
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.4
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:infinity": 1
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.3
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:mending": 1
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.3
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:crossbow",
+          "weight": 105,
+          "functions": [
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:quick_charge": {
+                  "type": "minecraft:uniform",
+                  "min": 2,
+                  "max": 3
+                }
+              }
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:unbreaking": {
+                  "type": "minecraft:uniform",
+                  "min": 2,
+                  "max": 3
+                }
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.6
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:piercing": {
+                  "type": "minecraft:uniform",
+                  "min": 2,
+                  "max": 4
+                }
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.5
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "add": true,
+              "enchantments": {
+                "minecraft:mending": 1
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.3
+                }
+              ]
             }
           ]
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:enchanted_book",
-          "weight": 15,
+          "weight": 9,
           "functions": [
             {
               "function": "minecraft:set_components",
               "components": {
                 "minecraft:stored_enchantments": {
-                  "levels": {
-                    "minecraft:sharpness": 5
-                  }
+                  "minecraft:sharpness": 3
                 }
               }
             }
@@ -217,15 +1843,13 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:enchanted_book",
-          "weight": 15,
+          "weight": 9,
           "functions": [
             {
               "function": "minecraft:set_components",
               "components": {
                 "minecraft:stored_enchantments": {
-                  "levels": {
-                    "minecraft:protection": 4
-                  }
+                  "minecraft:sharpness": 4
                 }
               }
             }
@@ -234,15 +1858,13 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:enchanted_book",
-          "weight": 15,
+          "weight": 9,
           "functions": [
             {
               "function": "minecraft:set_components",
               "components": {
                 "minecraft:stored_enchantments": {
-                  "levels": {
-                    "minecraft:efficiency": 5
-                  }
+                  "minecraft:sharpness": 5
                 }
               }
             }
@@ -251,15 +1873,13 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:enchanted_book",
-          "weight": 15,
+          "weight": 9,
           "functions": [
             {
               "function": "minecraft:set_components",
               "components": {
                 "minecraft:stored_enchantments": {
-                  "levels": {
-                    "minecraft:fortune": 3
-                  }
+                  "minecraft:protection": 2
                 }
               }
             }
@@ -268,15 +1888,13 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:enchanted_book",
-          "weight": 15,
+          "weight": 9,
           "functions": [
             {
               "function": "minecraft:set_components",
               "components": {
                 "minecraft:stored_enchantments": {
-                  "levels": {
-                    "minecraft:unbreaking": 3
-                  }
+                  "minecraft:protection": 3
                 }
               }
             }
@@ -285,15 +1903,538 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:enchanted_book",
-          "weight": 15,
+          "weight": 9,
           "functions": [
             {
               "function": "minecraft:set_components",
               "components": {
                 "minecraft:stored_enchantments": {
-                  "levels": {
-                    "minecraft:mending": 1
-                  }
+                  "minecraft:protection": 4
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:enchanted_book",
+          "weight": 9,
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:stored_enchantments": {
+                  "minecraft:efficiency": 3
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:enchanted_book",
+          "weight": 9,
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:stored_enchantments": {
+                  "minecraft:efficiency": 4
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:enchanted_book",
+          "weight": 9,
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:stored_enchantments": {
+                  "minecraft:efficiency": 5
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:enchanted_book",
+          "weight": 14,
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:stored_enchantments": {
+                  "minecraft:unbreaking": 2
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:enchanted_book",
+          "weight": 14,
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:stored_enchantments": {
+                  "minecraft:unbreaking": 3
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:enchanted_book",
+          "weight": 14,
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:stored_enchantments": {
+                  "minecraft:fortune": 2
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:enchanted_book",
+          "weight": 14,
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:stored_enchantments": {
+                  "minecraft:fortune": 3
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:enchanted_book",
+          "weight": 14,
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:stored_enchantments": {
+                  "minecraft:looting": 2
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:enchanted_book",
+          "weight": 14,
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:stored_enchantments": {
+                  "minecraft:looting": 3
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:enchanted_book",
+          "weight": 9,
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:stored_enchantments": {
+                  "minecraft:power": 3
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:enchanted_book",
+          "weight": 9,
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:stored_enchantments": {
+                  "minecraft:power": 4
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:enchanted_book",
+          "weight": 9,
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:stored_enchantments": {
+                  "minecraft:power": 5
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:enchanted_book",
+          "weight": 9,
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:stored_enchantments": {
+                  "minecraft:feather_falling": 2
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:enchanted_book",
+          "weight": 9,
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:stored_enchantments": {
+                  "minecraft:feather_falling": 3
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:enchanted_book",
+          "weight": 9,
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:stored_enchantments": {
+                  "minecraft:feather_falling": 4
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:enchanted_book",
+          "weight": 14,
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:stored_enchantments": {
+                  "minecraft:thorns": 2
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:enchanted_book",
+          "weight": 14,
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:stored_enchantments": {
+                  "minecraft:thorns": 3
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:enchanted_book",
+          "weight": 28,
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:stored_enchantments": {
+                  "minecraft:mending": 1
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:enchanted_book",
+          "weight": 28,
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:stored_enchantments": {
+                  "minecraft:infinity": 1
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:enchanted_book",
+          "weight": 14,
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:stored_enchantments": {
+                  "minecraft:respiration": 2
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:enchanted_book",
+          "weight": 14,
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:stored_enchantments": {
+                  "minecraft:respiration": 3
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:enchanted_book",
+          "weight": 14,
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:stored_enchantments": {
+                  "minecraft:depth_strider": 2
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:enchanted_book",
+          "weight": 14,
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:stored_enchantments": {
+                  "minecraft:depth_strider": 3
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:enchanted_book",
+          "weight": 14,
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:stored_enchantments": {
+                  "minecraft:sweeping_edge": 2
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:enchanted_book",
+          "weight": 14,
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:stored_enchantments": {
+                  "minecraft:sweeping_edge": 3
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:enchanted_book",
+          "weight": 14,
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:stored_enchantments": {
+                  "minecraft:fire_aspect": 1
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:enchanted_book",
+          "weight": 14,
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:stored_enchantments": {
+                  "minecraft:fire_aspect": 2
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:enchanted_book",
+          "weight": 28,
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:stored_enchantments": {
+                  "minecraft:flame": 1
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:enchanted_book",
+          "weight": 14,
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:stored_enchantments": {
+                  "minecraft:punch": 1
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:enchanted_book",
+          "weight": 14,
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:stored_enchantments": {
+                  "minecraft:punch": 2
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:enchanted_book",
+          "weight": 14,
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:stored_enchantments": {
+                  "minecraft:quick_charge": 2
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:enchanted_book",
+          "weight": 14,
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:stored_enchantments": {
+                  "minecraft:quick_charge": 3
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:enchanted_book",
+          "weight": 9,
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:stored_enchantments": {
+                  "minecraft:piercing": 2
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:enchanted_book",
+          "weight": 9,
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:stored_enchantments": {
+                  "minecraft:piercing": 3
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:enchanted_book",
+          "weight": 9,
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:stored_enchantments": {
+                  "minecraft:piercing": 4
                 }
               }
             }

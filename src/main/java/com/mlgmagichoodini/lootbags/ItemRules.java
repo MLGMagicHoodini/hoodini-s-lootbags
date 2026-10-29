@@ -4,14 +4,14 @@ import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 
 /**
  * Items that can NEVER come out of a lootbag, no matter what the config or a datapack says.
  * (Spawn eggs are handled separately by a config option.)
  */
 public class ItemRules {
-    public static final Set<ResourceLocation> ALWAYS_BLOCKED = Stream.of(
+    public static final Set<Identifier> ALWAYS_BLOCKED = Stream.of(
             "air",
             "bedrock",
             "barrier",
@@ -32,7 +32,7 @@ public class ItemRules {
             "reinforced_deepslate",
             "petrified_oak_slab",
             "budding_amethyst"
-    ).map(ResourceLocation::withDefaultNamespace).collect(Collectors.toUnmodifiableSet());
+    ).map(Identifier::withDefaultNamespace).collect(Collectors.toUnmodifiableSet());
 
     private ItemRules() {
     }
